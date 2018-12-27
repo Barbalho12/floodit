@@ -17,8 +17,8 @@
 - [X] Enable the creation of matches with other levels of difficulty with bigger / smaller boards and maximum number of moves.
 - [X] Documentation of functionalities of each subroutine.
 
-- [] Give the possibility to Save and Load several games.
-- [] Enable the creation of games with different colors.
+- [ ] Give the possibility to Save and Load several games.
+- [ ] Enable the creation of games with different colors.
 
 ## Compiling
 
