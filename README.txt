@@ -1,75 +1,61 @@
--| FUNCIONALIDADE IMPLEMENTADAS |-
+# Flood-It
 
-	1. CriaÁ„o de typedef, structs e enuns.
-	2. ModularizaÁ„o do programa (arquivos .c e .h). 
-	3. GeraÁ„o aleatÛria do tabuleiro (14x14 cÈlulas); 
-	4. ApresentaÁ„o da interface inicial do jogo com o tabuleiro gerado. 
-	5. Leitura da entrada do usu·rio.
-	6. AtualizaÁ„o do tabuleiro de forma recursiva.
-	7. Preenchendo os adjacentes de mesma cor.
-	8. ImplementaÁ„o da condiÁ„o de tÈrmino do jogo (m·ximo 25 rodadas ou tabuleiro completamente preenchido).
-	9. Salvamento e carregamento do estado de um jogo.
-	10. Elementos extras:
-		10.1 DistribuiÁ„o uniforme na geraÁ„o das cores no tabuleiro.
-		10.2 Desenvolvimento de Interface Gr·fica compatÌvel com Linux e Windows.
-		10.3 ComunicaÁ„o com o usu·rio atrvÈs do click do mouse.
-		10.4 Possibilitar a criaÁ„o de partidas com outros nÌveis de dificuldades com tabuleiros maiores/menores e n˙mero m·ximos de jogadas.
-		
-	11. DocumentaÁ„o de funcionalidades de cada subrotina.
+## Funcionalidades
 
+- [X] Cria√ß√£o de typedef, structs e enuns.
+- [X] Modulariza√ß√£o do programa (arquivos .c e .h). 
+- [X] Gera√ß√£o aleat√≥ria do tabuleiro (14x14 c√©lulas); 
+- [X] Apresenta√ß√£o da interface inicial do jogo com o tabuleiro gerado. 
+- [X] Leitura da entrada do usu√°rio.
+- [X] Atualiza√ß√£o do tabuleiro de forma recursiva.
+- [X] Preenchendo os adjacentes de mesma cor.
+- [X] Implementa√ß√£o da condi√ß√£o de t√©rmino do jogo (m√°ximo 25 rodadas ou tabuleiro completamente preenchido).
+- [X] Salvamento e carregamento do estado de um jogo.
+- [X] Distribui√ß√£o uniforme na gera√ß√£o das cores no tabuleiro.
+- [X] Desenvolvimento de Interface Gr√°fica compat√≠vel com Linux e Windows.
+- [X] Comunica√ß√£o com o usu√°rio atrv√©s do click do mouse.
+- [X] Possibilitar a cria√ß√£o de partidas com outros n√≠veis de dificuldades com tabuleiros maiores/menores e n√∫mero m√°ximos de jogadas.	
+- [X] Documenta√ß√£o de funcionalidades de cada subrotina.
 	
--| N√O FOI IMPLEMENTADO |-
-	
-	1. Dar a possibilidade de Salvar e Carregar v·rios jogos.
-	2. Possibilitar a criaÁ„o de partidas com quantidade de cores diferentes.
+- [ ] Dar a possibilidade de Salvar e Carregar v√°rios jogos.
+- [ ] Possibilitar a cria√ß√£o de partidas com quantidade de cores diferentes.
 
-	
--| REFLEX√O |-
+## Compila√ß√£o 
 
-	O feito mais importante durante o desenvolvimento do jogo foi a padronizaÁ„o do cÛdigo, buscando sempre modularizar
-	cada funcionalidade de forma que o mesmo tivesse um modelo coeso de organizaÁ„o, facilitando a manutenÁ„o e a inserÁ„o de novas
-	funcionalidades. E a impress„o que fica È que poderiamos aprimorar ainda mais essa padronizaÁ„o, tornando o cÛdigo mais abstrato e 
-	mais simples de ser compreendido.
+### Windows
 
+* Biblioteca Gr√°fica: GTK 
+* Vers√£o: 3.6.4
+* Download: http://www.gtk.org/download/win32.php
+* Instala√ß√£o: http://www.gtk.org/download/win32_tutorial.php
 
--| COMPILA«√O |-
+```bash
+# Compila√ß√£o loadGame
+gcc loadGame.c interface.c color.c table.c file.c controle.c -o loadGame -mms-bitfields 
+-IC:/gtk3/include/gtk-3.0 -IC:/gtk3/include/cairo -IC:/gtk3/include/pango-1.0 -IC:/gtk3/include/atk-1.0 
+-IC:/gtk3/include/cairo -IC:/gtk3/include -IC:/gtk3/include/gdk-pixbuf-2.0 -IC:/gtk3/include/libpng15 
+-IC:/gtk3/include/glib-2.0 -IC:/gtk3/lib/glib-2.0/include -LC:/gtk3/lib -lgtk-3 -lgobject-2.0 -lglib-2.0
+# Compila√ß√£o newGame
+gcc newGame.c color.c table.c file.c -o newGame
+```
 
-	-|Windows|-
+### Linux
 
-		Biblioteca Gr·fica: GTK 
-		Vers„o: 3.6.4
-		Download: http://www.gtk.org/download/win32.php
-		InstalaÁ„o: http://www.gtk.org/download/win32_tutorial.php
+* Biblioteca Gr√°fica: GTK 
+* Vers√£o: 3.12
+* Download: http://www.gtk.org/download/linux.php ou atrav√©s do comando: "sudo apt-get install libgtk-3-dev"
+* Instala√ß√£o: https://developer.gnome.org/gtk3/stable/gtk-building.html
 
-		CompilaÁ„o loadGame (main):
-			gcc loadGame.c interface.c color.c table.c file.c controle.c -o loadGame -mms-bitfields 
-			-IC:/gtk3/include/gtk-3.0 -IC:/gtk3/include/cairo -IC:/gtk3/include/pango-1.0 -IC:/gtk3/include/atk-1.0 
-			-IC:/gtk3/include/cairo -IC:/gtk3/include -IC:/gtk3/include/gdk-pixbuf-2.0 -IC:/gtk3/include/libpng15 
-			-IC:/gtk3/include/glib-2.0 -IC:/gtk3/lib/glib-2.0/include -LC:/gtk3/lib -lgtk-3 -lgobject-2.0 -lglib-2.0
-
-		CompilaÁ„o newGame (main):
-			gcc newGame.c color.c table.c file.c -o newGame
-
-	-|Linux|-
-		
-		Biblioteca Gr·fica: GTK 
-		Vers„o: 3.12
-		Download: http://www.gtk.org/download/linux.php ou atravÈs do comando: "sudo apt-get install libgtk-3-dev"
-		InstalaÁ„o: https://developer.gnome.org/gtk3/stable/gtk-building.html
-		
-		loadGame (main):
-			gcc loadGame.c interface.c color.c table.c file.c controle.c -o loadGame `pkg-config --cflags --libs gtk+-3.0`
-
-		newGame (main):
-			gcc newGame.c color.c table.c file.c -o newGame
+```bash
+# Compila√ß√£o loadGame
+gcc loadGame.c interface.c color.c table.c file.c controle.c -o loadGame `pkg-config --cflags --libs gtk+-3.0`
+# Compila√ß√£o newGame
+gcc newGame.c color.c table.c file.c -o newGame
+```
 
 
+## Componentes 
 
--| COMPONENTES |-
-	Felipe Barbalho Rocha 
-	Raul Silveira Silva
-	
-	- | TAREFAS INDIVIDUAIS | -
-		Todo o desenvolvimento do jogo foi realizado em conjunto, sem divis„o de tarefas. sendo possivel uma vis„o mais completa de ambos os componentes
-		sobre o projeto como um todo, e um maior complemento de ideias.
+Felipe Barbalho Rocha 
+Raul Silveira Silva
 
