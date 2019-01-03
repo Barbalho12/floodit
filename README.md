@@ -1,6 +1,6 @@
 # Flood-It
 
-<p ><img src="print.jpeg" width="400px"/></p>
+<p align="center"><img src="print.jpeg" width="300px"/></p>
 
 ## Functionalities
 
