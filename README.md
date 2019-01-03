@@ -1,5 +1,7 @@
 # Flood-It
 
+<p ><img src="print.jpeg" width="400px"/></p>
+
 ## Functionalities
 
 - [X] Creation of typedef, structs and enuns.
