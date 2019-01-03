@@ -43,7 +43,12 @@ gcc newGame.c color.c table.c file.c -o newGame
 
 * Graphic Library: GTK
 * Version: 3.12
-* Download: http://www.gtk.org/download/linux.php ou através do comando: "sudo apt-get install libgtk-3-dev"
+* Download: http://www.gtk.org/download/linux.php or : 
+
+```bash
+sudo apt install libgtk-3-dev
+```
+
 * Installation: https://developer.gnome.org/gtk3/stable/gtk-building.html
 
 ```bash
@@ -52,7 +57,6 @@ gcc loadGame.c interface.c color.c table.c file.c controle.c -o loadGame `pkg-co
 # Compiling newGame
 gcc newGame.c color.c table.c file.c -o newGame
 ```
-
 
 ##  Members
 
